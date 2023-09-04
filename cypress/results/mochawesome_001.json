@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-03T02:05:12.546Z",
+    "end": "2023-09-03T02:05:16.868Z",
+    "duration": 4322,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1a9363e6-ce1b-4ace-8f38-8d3fdfc3d1b6",
+      "title": "",
+      "fullFile": "cypress/e2e/Counter.spec.cy.js",
+      "file": "cypress/e2e/Counter.spec.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fa486625-7d6f-4fb6-8359-c04224eccb66",
+          "title": "Functional Test Automation with Cypress",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Verify increment button functionality",
+              "fullTitle": "Functional Test Automation with Cypress Verify increment button functionality",
+              "timedOut": null,
+              "duration": 638,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('localhost:3000');\ncy.contains('CounterApp');\ncy.get('h2').should('contain.text', '10');\ncy.get('button').first().click();\ncy.get('h2').should('contain.text', '11');",
+              "err": {},
+              "uuid": "7584b4bf-ccf8-493f-9e5f-08f997e3e443",
+              "parentUUID": "fa486625-7d6f-4fb6-8359-c04224eccb66",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify decrement button functionality",
+              "fullTitle": "Functional Test Automation with Cypress Verify decrement button functionality",
+              "timedOut": null,
+              "duration": 261,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('localhost:3000');\ncy.contains('CounterApp');\ncy.get('h2').should('contain.text', '10');\ncy.get('button').last().click();\ncy.get('h2').should('contain.text', '9');",
+              "err": {},
+              "uuid": "ca6b238b-3381-4653-8ed6-6f00c2258544",
+              "parentUUID": "fa486625-7d6f-4fb6-8359-c04224eccb66",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Verify reset button functionality",
+              "fullTitle": "Functional Test Automation with Cypress Verify reset button functionality",
+              "timedOut": null,
+              "duration": 1131,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('localhost:3000');\ncy.contains('CounterApp');\ncy.get('h2').should('contain.text', '10');\nfor (let i = 0; i < 10; i++) {\n  cy.get('button').last().click();\n}\ncy.get('h2').should('contain.text', '0');\ncy.contains('Reset').click();\ncy.get('h2').should('contain.text', '10');",
+              "err": {},
+              "uuid": "673f23f6-e0d0-462c-92b5-edc354efc7ef",
+              "parentUUID": "fa486625-7d6f-4fb6-8359-c04224eccb66",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7584b4bf-ccf8-493f-9e5f-08f997e3e443",
+            "ca6b238b-3381-4653-8ed6-6f00c2258544",
+            "673f23f6-e0d0-462c-92b5-edc354efc7ef"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2030,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
